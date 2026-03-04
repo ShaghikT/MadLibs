@@ -1,9 +1,9 @@
 ﻿from ast import Try, While
 import random
 
-GameModeOne = True
+GameModeOn = True
 
-while GameModeOne:
+while GameModeOn:
 
   print("Welcome to Mad Libs!")
   print("Choose a template by entering 1:Hospital 2:Camping 3:Castle :")
@@ -107,11 +107,11 @@ while GameModeOne:
   continue_game = input("Do you want to play again? (yes/no): ").strip().lower()
 
   if continue_game == "yes":
-    GameModeOne = True
+    GameModeOn = True
 
   elif continue_game == "no":
        print("Bye, see you later.")
-       GameModeOne = False
+       GameModeOn = False
   else:
     print("Invalid input. Exiting the game.")
-    GameModeOne = False
+    GameModeOn = False
