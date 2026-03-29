@@ -1,5 +1,21 @@
 ﻿from ast import Try, While
 import random
+from webbrowser import get
+
+def get_number_input(prompt):
+    user_input = input(prompt).strip()
+    while user_input == "" or not user_input.isdigit():
+        print("Please enter a valid number.")
+        user_input = input(prompt).strip()
+    return user_input
+
+
+def get_word_input(prompt):
+    user_input = input(prompt).strip()
+    while user_input == "" or not all(char.isalpha() or char.isspace() for char in user_input):
+        print("Invalid input. Please enter a word.")
+        user_input = input(prompt).strip()
+    return user_input
 
 GameModeOn = True
 
@@ -20,24 +36,24 @@ while GameModeOn:
 
    
   if templateChoice == "1":
-     number1 = input("Type a number: ")
-     measure_time = input("Type a measure of time: ")
-     transportation = input("Type a mode of transportation: ")
-     adjective1 = input("Type an adjective: ")
-     adjective2 = input("Type another adjective: ")
-     noun1 = input("Type a plural noun: ")
-     color = input("Type a color: ")
-     body_part1 = input("Type a body part: ")
-     verb1 = input("Type a verb: ")
-     number2 = input("Type a number: ")
-     noun2 = input("Type a noun: ")
-     noun3 = input("Type a noun: ")
-     body_part2 = input("Type a body part: ")
-     verb2 = input("Type a verb: ")
-     noun4 = input("Type a noun: ")
-     adjective3 = input("Type an adjective: ")
-     silly_word = input("Type a silly word: ")
-     noun5 = input("Type a noun: ")
+     number1 = get_number_input("Type a number: ")
+     measure_time = get_word_input("Type a measure of time: ")
+     transportation = get_word_input("Type a mode of transportation: ")
+     adjective1 = get_word_input("Type an adjective: ")
+     adjective2 = get_word_input("Type another adjective: ")
+     noun1 = get_word_input("Type a noun: ")
+     color = get_word_input("Type a color: ")
+     body_part1 = get_word_input("Type a body part: ")
+     verb1 = get_word_input("Type a verb: ")
+     number2 = get_number_input("Type a number: ")
+     noun2 = get_word_input("Type a noun: ")
+     noun3 = get_word_input("Type a noun: ")
+     body_part2 = get_word_input("Type another body part: ")
+     verb2 = get_word_input("Type another verb: ")
+     noun4 = get_word_input("Type a noun: ")
+     adjective3 = get_word_input("Type another adjective: ")
+     silly_word = get_word_input("Type a silly word: ")
+     noun5 = get_word_input("Type a noun: ")
 
      print (f""" It was about {number1} {measure_time} ago when I arrived at the hospital in a {transportation}. 
       The hospital is a {adjective1} place, there are a lot of {adjective2} {noun1} here.  There are nurses 
@@ -48,23 +64,23 @@ while GameModeOn:
       hospital is the {silly_word} {noun5}!""")
 
   elif templateChoice == "2":
-    name = input("Type a person's name: ")
-    noun1 = input("Type a noun: ")
-    feeling1 = input("Type a feeling (adjective): ")
-    verb1 = input("Type a verb: ")
-    feeling2 = input("Type a feeling (adjective): ")
-    animal1 = input("Type an animal: ")
-    verb2 = input("Type another verb: ")
-    color1 = input("Type a color: ")
-    verb_ing = input("Type a verb ending in 'ing': ")
+    name = get_word_input("Type a person's name: ")
+    noun1 = get_word_input("Type a noun: ")
+    feeling1 = get_word_input("Type a feeling (adjective): ")
+    verb1 = get_word_input("Type a verb: ")
+    feeling2 = get_word_input("Type another feeling (adjective): ")
+    animal1 = get_word_input("Type an animal: ")
+    verb2 = get_word_input("Type another verb: ")
+    color1 = get_word_input("Type a color: ")
+    verb_ing = get_word_input("Type a verb ending in 'ing': ")
     adverb = input("Type an adverb ending in 'ly': ")
-    number1 = input("Type a number: ")
-    measure_time = input("Type a measure of time: ")
-    color2 = input("Type another color: ")
-    animal2 = input("Type another animal: ")
-    number2 = input("Type another number: ")
-    silly_word = input("Type a silly word: ")
-    noun2 = input("Type another noun: ")
+    number1 = get_number_input("Type a number: ")
+    measure_time = get_word_input("Type a measure of time: ")
+    color2 = get_word_input("Type another color: ")
+    animal2 = get_word_input("Type another animal: ")
+    number2 = get_number_input("Type another number: ")
+    silly_word = get_word_input("Type a silly word: ")
+    noun2 = get_word_input("Type another noun: ")
 
 
     print(f""" This weekend I am going camping with {name}.I packed my lantern, sleeping bag, 
@@ -75,26 +91,26 @@ while GameModeOn:
     At night we will tell {number2} {silly_word} stories and roast {noun2} around the campfire!!""")
 
   elif templateChoice == "3":
-    name = input("Type a person's name: ")
-    adjective1 = input("Type an adjective: ")
-    color = input("Type a color: ")
-    animal = input("Type an animal: ")
-    place = input("Type a place: ")
-    adjective2 = input("Type an adjective: ")
-    creature1 = input("Type a magical creature (plural): ")
-    adjective3 = input("Type another adjective: ")
-    creature2 = input("Type another magical creature (plural): ")
-    room = input("Type a room in a house: ")
-    noun1 = input("Type a plural noun: ")
-    noun2 = input("Type another noun: ")
-    noun3= input("Type a plural noun: ")
-    adjective4 = input("Type an adjective: ")
-    noun4 = input("Type another plural noun: ")
-    number = input("Type a number: ")
-    measure_time = input("Type a measure of time: ")
-    verb = input("Type a verb ending in 'ing': ")
-    adjective5 = input("Type an adjective: ")
-    noun5 = input("Type a noun: ")
+    name = get_word_input("Type a person's name: ")
+    adjective1 = get_word_input("Type an adjective: ")
+    color = get_word_input("Type a color: ")
+    animal = get_word_input("Type an animal: ")
+    place = get_word_input("Type a place: ")
+    adjective2 = get_word_input("Type another adjective: ")
+    creature1 = get_word_input("Type a magical creature (plural): ")
+    adjective3 = get_word_input("Type another adjective: ")
+    creature2 = get_word_input("Type another magical creature (plural): ")
+    room = get_word_input("Type a room in a house: ")
+    noun1 = get_word_input("Type a noun: ")
+    noun2 = get_word_input("Type a noun: ")
+    noun3= get_word_input("Type another noun: ")
+    adjective4 = get_word_input("Type another adjective: ")
+    noun4 = get_word_input("Type another noun: ")
+    number = get_number_input("Type a number: ")
+    measure_time = get_word_input("Type a measure of time: ")
+    verb = get_word_input("Type a verb: ")
+    adjective5 = get_word_input("Type another adjective: ")
+    noun5 = get_word_input("Type another noun: ")
 
 
     print(f"""Dear {name}, I am writing to you from a {adjective1} castle in an enchanted forest.
