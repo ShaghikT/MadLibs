@@ -84,7 +84,6 @@ mad-libs/
 
 * The program uses a loop to allow the user to play multiple times.
 
-
 ---
 
 ## Author
